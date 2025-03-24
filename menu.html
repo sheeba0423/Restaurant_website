@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Restaurant Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://t3.ftcdn.net/jpg/02/05/87/60/360_F_205876015_hYYs7ugqoU8QAobSS3TbnGQ92qyS5gEc.jpg');
+            background-size: cover;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 10px;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            cursor: pointer;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        p {
+            color: #666;
+        }
+
+        img {
+            max-width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h2>Beef Burger</h2>
+            <img src="https://www.cuisinart.com/dw/image/v2/ABAF_PRD/on/demandware.static/-/Sites-us-cuisinart-sfra-Library/default/dw6bb5d8bb/images/recipe-Images/grilled-beef-burgers-recipe.png" alt="Beef Burger">
+            <p>Juicy beef patty with lettuce, tomato, onion, and pickles on a toasted bun.</p>
+            <p>Price: ₹674.25</p>
+        </div>
+        <div class="card">
+            <h2>Vegetable Stir-Fry</h2>
+            <img src="https://therecipecritic.com/wp-content/uploads/2019/08/vegetable_stir_fry.jpg" alt="Vegetable Stir-Fry">
+            <p>Assorted vegetables stir-fried in a flavorful sauce.</p>
+            <p>Price: ₹699.99</p>
+        </div>
+        <div class="card">
+            <h2>Classic Caesar Salad</h2>
+            <img src="https://foolproofliving.com/wp-content/uploads/2013/12/Classic-Caesar-Salad-recipe.jpg" alt="Classic Caesar Salad">
+            <p>Crisp romaine lettuce, croutons, and parmesan cheese tossed in Caesar dressing.</p>
+            <p>Price: ₹549.50</p>
+        </div>
+        <div class="card">
+            <h2>Grilled Chicken Salad</h2>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeyilK1EpPKK-3z-88iH0hpdQT2L5zkdMbtQ&usqp=CAU" alt="Grilled Chicken Salad">
+            <p>Fresh greens topped with grilled chicken, tomatoes, cucumbers, and a balsamic glaze.</p>
+            <p>Price: ₹974.25</p>
+        </div>
+        <div class="card">
+            <h2>Margherita Pizza</h2>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbnecR4xbqREH5L-rP0Cu74RzbRmfME2X_xVBIDgt5HQ&s" alt="Margherita Pizza">
+            <p>Classic pizza with tomato sauce, fresh mozzarella, basil, and olive oil.</p>
+            <p>Price: ₹824.25</p>
+        </div>
+        <div class="card">
+            <h2>Garlic Bread</h2>
+            <img src="https://www.ambitiouskitchen.com/wp-content/uploads/2023/02/Garlic-Bread-4.jpg" alt="Garlic Bread">
+            <p>Delicious, crispy garlic bread made with fresh herbs and butter.</p>
+            <p>Price: ₹299.50</p>
+        </div>
+    </div>
+</body>
+</html>

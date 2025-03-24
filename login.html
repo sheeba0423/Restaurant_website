@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Registration - Heritage House</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://as2.ftcdn.net/jpg/02/64/35/55/1000_F_264355518_BGi26E5YUCAXlkrHd2s9qPtJu8rro76p.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: center;
+        }
+        .container h2 {
+            margin-bottom: 15px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #555;
+        }
+        .toggle-link {
+            color: blue;
+            cursor: pointer;
+            margin-top: 10px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 id="form-title">User Registration</h2>
+        <form id="auth-form" onsubmit="return handleSubmit()">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <input type="tel" id="phone" placeholder="Phone Number" required>
+            <button type="submit">Register</button>
+        </form>
+        <span class="toggle-link" onclick="toggleForm()">Already have an account? Login here</span>
+    </div>
+    <script>
+        let isLogin = false;
+
+        function toggleForm() {
+            isLogin = !isLogin;
+            document.getElementById("form-title").innerText = isLogin ? "User Login" : "User Registration";
+            document.getElementById("phone").style.display = isLogin ? "none" : "block";
+            document.querySelector("button").innerText = isLogin ? "Login" : "Register";
+            document.querySelector(".toggle-link").innerText = isLogin ? "Don't have an account? Register here" : "Already have an account? Login here";
+        }
+
+        function handleSubmit() {
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+            let phone = document.getElementById("phone").value;
+
+            if (isLogin) {
+                if (username === "user" && password === "password") {
+                    alert("Login successful!");
+                    window.location.href = "review.html";
+                } else {
+                    alert("Invalid credentials!");
+                }
+            } else {
+                alert("Registration successful! You can now log in.");
+                toggleForm();
+            }
+            return false;
+        }
+    </script>
+</body>
+</html>
